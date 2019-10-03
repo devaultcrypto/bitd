@@ -1,4 +1,4 @@
-const bch = require('bitcore-lib-cash')
+const bch = require('bitcore-lib-dvt')
 const zmq = require('zeromq')
 const RpcClient = require('bitcoind-rpc')
 const TNA = require('fountainhead-tna')

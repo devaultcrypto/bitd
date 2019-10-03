@@ -1,9 +1,8 @@
 {
-  "name": "fountainhead-bitd",
+  "name": "devault-bitd",
   "version": "0.2.5",
-  "description": "decentralized autonomous database over bitcoin",
+  "description": "decentralized autonomous database over devault",
   "main": "index.js",
-  "author": "21 Century Motor Company",
   "license": "MIT",
   "scripts": {
     "start": "node index",
@@ -11,7 +10,7 @@
   },
   "dependencies": {
     "bitcoind-rpc": "^0.7.2",
-    "bitcore-lib-cash": "^0.19.0",
+    "bitcore-lib-dvt": "^8.1.2",
     "dotenv": "^6.0.0",
     "fountainhead-bcode": "0.0.6",
     "fountainhead-bigjq": "0.0.13",

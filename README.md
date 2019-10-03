@@ -1,28 +1,28 @@
-## What is Bitd?
+## What is BitD / BitDB?
 
-Bitd is a scraper for Bitcoin Cash that fetches transaction data from the blockchain and stores it in a MongoDB database. You need to install this to set up bitserve and run a bitdb node. As the software matures synchronization speed will get better, but for now expect a day or two from the default checkpoint block depending on your hardware.
+BitD is a scraper for DeVault that fetches transaction data from the blockchain and stores it in a MongoDB database. BitD is a fork of the Fountainhead Cash implementation of Bitd (forked from _Unwriter/21 Century Motor Company). You need to install this to set up bitserve and run a bitdb node. 
 
 ### Hardware Requirements
-If you intend to run a full un-pruned bitdb node, it is recommended that your server have at the very minimum **4 gigabytes of ram** or more available at all times, and that you have enough storage space to house the whole blockchain three times over. If this is not the case, you may look into changing the [core_from](https://github.com/fountainhead-cash/bitd/blob/master/.env.example#L15) enviorment variable to a more recent blockheight.
+If you intend to run a full un-pruned bitdb node, it is recommended that your server have at the very minimum **3 gigabytes of ram** or more available at all times, and that you have enough storage space to house the whole blockchain three times over. If this is not the case, you may look into changing the [core_from](https://github.com/fountainhead-cash/bitd/blob/master/.env.example#L15) enviorment variable to a more recent blockheight.
 
 ## Installation
 
 ### Prerequisite
 First you need to do the following:
-1. Install Bitcoin ABC or equivilant node software on your server
+1. Install DeVault Core node software on your server
 2. Install the latest versions of NPM and Nodejs on your server
 2. Install MongoDB on your server
 
-Before sync, set up your bitcoin.conf file to meet the requirements set by bitd. On Ubuntu this can be found in $HOME/.bitcoin/bitcoin.conf
+Before sync, set up your devault.conf file to meet the requirements set by bitd. On Ubuntu this can be found in $HOME/.devault/devault.conf
 
 A sample configuration file can be found below:
 ```
 # location to store blockchain and other data -- if you
 # don't know what to do here, just remove the below line
-datadir=/data/Bitcoin
+datadir=/data/DeVault
 dbcache=4000
 
-# Must set txindex=1 so Bitcoin keeps the full index
+# Must set txindex=1 so DeVault keeps the full index
 txindex=1
 
 # [rpc]
@@ -30,7 +30,7 @@ txindex=1
 server=1
 # Choose a strong password here
 rpcuser=root
-rpcpassword=bitcoin
+rpcpassword=devault
 
 # If you want to allow remote JSON-RPC access
 rpcallowip=0.0.0.0/0
@@ -52,7 +52,7 @@ rpcworkqueue=512
 
 Clone this repository:
 ```
-git clone https://github.com/fountainhead-cash/bitd.git && cd bitd
+git clone https://github.com/devaultcrypto/bitd.git && cd bitd
 ```
 
 Install dependencies:

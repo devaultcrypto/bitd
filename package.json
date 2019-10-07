@@ -1,5 +1,5 @@
 {
-  "name": "devault-bitd",
+  "name": "dvt-bitd",
   "version": "0.2.5",
   "description": "decentralized autonomous database over devault",
   "main": "index.js",
